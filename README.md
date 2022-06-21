@@ -7,7 +7,11 @@ Frontend desenvolvido utilizando ReactJS para a disciplina de POO II.
 
 ## Funcionalidades do projeto
 
+<<<<<<< HEAD
 - `Parte 1`: Cadastrar, listar, atualizar e deletar usuário.
+=======
+- `Parte 1`: Cadastrar, listar, atualizar e deletar usuário. 
+>>>>>>> 2e6e0e1eefae132bb02b3f667f3d91db076e17a8
 
 ## Tecnologias Utilizadas
 
