@@ -48,12 +48,12 @@ const List = () => {
   }, []);
 
   async function deleteUser(id) {
-    await api.delete(`users/${id}`).then(() => {
-      alert('Usuário Deletado com Sucesso!');
-      window.location.reload(false);
-    });
+    if (window.confirm('Tem certeza que deseja deletar?')) {
+      await api.delete(`users/${id}`).then(() => {
+        window.location.reload(false);
+      });
+    }
   }
-
   return (
     <div className="grid h-screen place-items-center hover:bg-white">
       <table className="table-auto bg-white-400 border-collapse border border-slate-400">
