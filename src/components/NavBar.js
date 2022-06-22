@@ -8,7 +8,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="w-screen h-[80px] z-10 text-indigo-800 fixed drop-shadlow-lg mt-8 bg-white">
+      <div className="w-screen h-[80px] z-10 text-indigo-800 fixed mt-8 bg-white">
         <div className="px-10 flex justify-between items-center w-full h-full">
           <div className="flex items-center">
             <h1 className="text-2xl font-bold mr-4 sm:text-3xl">
