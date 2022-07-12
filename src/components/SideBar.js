@@ -86,15 +86,16 @@ const SideBar = () => {
               </span>
             </li>
           </Link>
-
-          <li
-            className={`flex rounded-md p-2 cursor-pointer hover:bg-indigo-300 text-white font-medium items-center gap-x-4 mt-2`}
-          >
-            <LogoutIcon className="w-9" />
-            <span className={`${!open && 'hidden'} origin-left duration-200`}>
-              Sair
-            </span>
-          </li>
+          <Link to="/">
+            <li
+              className={`flex rounded-md p-2 cursor-pointer hover:bg-indigo-300 text-white font-medium items-center gap-x-4 mt-2`}
+            >
+              <LogoutIcon className="w-9" />
+              <span className={`${!open && 'hidden'} origin-left duration-200`}>
+                Sair
+              </span>
+            </li>
+          </Link>
         </ul>
       </div>
     </div>
