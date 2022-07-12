@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { LockClosedIcon } from '@heroicons/react/solid';
 import api from '../services/api';
+import LayoutBase from '../components/LayoutBase';
 
 const Login = () => {
   const [data, setData] = useState({
@@ -36,80 +37,82 @@ const Login = () => {
   }
 
   return (
-    <div>
-      <div className="grid h-screen place-items-center">
-        <div className="max-w-md w-full space-y-8 rounded-md px-4 border-2 border-indigo-200">
-          <div>
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-indigo-600">
-              Login
-            </h2>
-          </div>
-          <form
-            className="mt-8 space-y-6"
-            action="#"
-            method="POST"
-            onSubmit={(e) => submit(e)}
-          >
-            <div className="rounded-md shadow-sm -space-y-px">
-              <div>
-                <label htmlFor="email" className="sr-only">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="{data.email}"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500  rounded-t-md text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Email"
-                  onChange={(e) => handle(e)}
-                />
-              </div>
-              <div>
-                <label htmlFor="senha" className="sr-only">
-                  Senha
-                </label>
-                <input
-                  id="senha"
-                  name="{data.senha}"
-                  type="password"
-                  required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Senha"
-                  onChange={(e) => handle(e)}
-                />
-              </div>
+    <LayoutBase>
+      <div>
+        <div className="grid h-screen place-items-center">
+          <div className="max-w-md w-full space-y-8 rounded-md px-4 border-2 border-indigo-200">
+            <div>
+              <h2 className="mt-6 text-center text-3xl font-extrabold text-indigo-600">
+                Login
+              </h2>
             </div>
+            <form
+              className="mt-8 space-y-6"
+              action="#"
+              method="POST"
+              onSubmit={(e) => submit(e)}
+            >
+              <div className="rounded-md shadow-sm -space-y-px">
+                <div>
+                  <label htmlFor="email" className="sr-only">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    name="{data.email}"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500  rounded-t-md text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    placeholder="Email"
+                    onChange={(e) => handle(e)}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="senha" className="sr-only">
+                    Senha
+                  </label>
+                  <input
+                    id="senha"
+                    name="{data.senha}"
+                    type="password"
+                    required
+                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    placeholder="Senha"
+                    onChange={(e) => handle(e)}
+                  />
+                </div>
+              </div>
 
-            <div className="place-items-center">
-              <div className="text-sm text-center">
-                <p>Não possui cadastro?</p>
-                <p className="font-medium text-indigo-600 hover:text-indigo-500">
-                  <Link to="/register">Cadastrar</Link>
-                </p>
+              <div className="place-items-center">
+                <div className="text-sm text-center">
+                  <p>Não possui cadastro?</p>
+                  <p className="font-medium text-indigo-600 hover:text-indigo-500">
+                    <Link to="/register">Cadastrar</Link>
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="pb-4">
-              <Link to="/dashboard">
-                <button
-                  type="submit"
-                  className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-                    <LockClosedIcon
-                      className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
-                      aria-hidden="true"
-                    />
-                  </span>
-                  Login
-                </button>
-              </Link>
-            </div>
-          </form>
+              <div className="pb-4">
+                <Link to="/dashboard">
+                  <button
+                    type="submit"
+                    className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  >
+                    <span className="absolute left-0 inset-y-0 flex items-center pl-3">
+                      <LockClosedIcon
+                        className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    Login
+                  </button>
+                </Link>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </LayoutBase>
   );
 };
 
